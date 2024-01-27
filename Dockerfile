@@ -1,4 +1,5 @@
-FROM amazoncorretto:8-alpine-jdk
+FROM openjdk:17-oracle
 VOLUME /tmp
 COPY build/libs/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
+EXPOSE 8080
